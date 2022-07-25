@@ -11,16 +11,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletResponse;
-
-import js.mvc.AbstractView;
-import js.mvc.View;
-import js.mvc.ViewMeta;
-import js.util.Classes;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.HttpServletResponse;
+import js.tiny.container.mvc.AbstractView;
+import js.tiny.container.mvc.View;
+import js.tiny.container.mvc.ViewMeta;
+import js.util.Classes;
 
 public class ViewUnitTest
 {

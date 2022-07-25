@@ -14,16 +14,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamSource;
 
-import js.http.ContentType;
-import js.json.Json;
-import js.lang.BugError;
-import js.log.Log;
-import js.log.LogFactory;
-import js.mvc.AbstractView;
-import js.template.Template;
-import js.template.TemplateEngine;
-import js.util.Classes;
-
 import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopConfParser;
@@ -31,6 +21,15 @@ import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.FopFactoryBuilder;
 import org.apache.fop.apps.MimeConstants;
 import org.xml.sax.SAXException;
+
+import js.json.Json;
+import js.lang.BugError;
+import js.log.Log;
+import js.log.LogFactory;
+import js.template.Template;
+import js.template.TemplateEngine;
+import js.tiny.container.mvc.AbstractView;
+import js.util.Classes;
 
 /**
  * View specialized for PDF documents rendering. This view uses XSL-FO formatted templates to describe PDF document and
@@ -59,7 +58,7 @@ final class PdfView extends AbstractView
   private static String FOP_CFG = Classes.getPackageResource(PdfView.class, "fop.xconf");
 
   /** Content type for PDF documents. */
-  private static ContentType CONTENT_TYPE = new ContentType("application/pdf");
+  private static String CONTENT_TYPE = "application/pdf";
 
   /**
    * FOP factory instance. Excerpt from API: It's important to reuse this instance if you plan to render multiple
@@ -74,7 +73,7 @@ final class PdfView extends AbstractView
   }
 
   @Override
-  protected ContentType getContentType()
+  protected String getContentType()
   {
     return CONTENT_TYPE;
   }

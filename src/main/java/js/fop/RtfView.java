@@ -14,16 +14,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamSource;
 
-import js.http.ContentType;
-import js.json.Json;
-import js.lang.BugError;
-import js.log.Log;
-import js.log.LogFactory;
-import js.mvc.AbstractView;
-import js.template.Template;
-import js.template.TemplateEngine;
-import js.util.Classes;
-
 import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopConfParser;
@@ -31,6 +21,15 @@ import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.FopFactoryBuilder;
 import org.apache.fop.apps.MimeConstants;
 import org.xml.sax.SAXException;
+
+import js.json.Json;
+import js.lang.BugError;
+import js.log.Log;
+import js.log.LogFactory;
+import js.template.Template;
+import js.template.TemplateEngine;
+import js.tiny.container.mvc.AbstractView;
+import js.util.Classes;
 
 /**
  * View for RTF documents based on XSL-FO template. RTF stands for Rich Text Format and is developed by Microsoft. Most word
@@ -60,7 +59,7 @@ final class RtfView extends AbstractView {
 	private static String FOP_CFG = Classes.getPackageResource(RtfView.class, "fop.xconf");
 
 	/** Content type for RTF documents. */
-	private static ContentType CONTENT_TYPE = new ContentType("application/rtf");
+	private static String CONTENT_TYPE = "application/rtf";
 
 	/**
 	 * FOP factory instance. Excerpt from API: It's important to reuse this instance if you plan to render multiple documents
@@ -73,7 +72,7 @@ final class RtfView extends AbstractView {
 	}
 
 	@Override
-	protected ContentType getContentType() {
+	protected String getContentType() {
 		return CONTENT_TYPE;
 	}
 

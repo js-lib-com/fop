@@ -24,8 +24,8 @@ import org.xml.sax.SAXException;
 
 import js.json.Json;
 import js.lang.BugError;
-import js.log.Log;
-import js.log.LogFactory;
+import com.jslib.api.log.Log;
+import com.jslib.api.log.LogFactory;
 import js.template.Template;
 import js.template.TemplateEngine;
 import js.tiny.container.mvc.AbstractView;

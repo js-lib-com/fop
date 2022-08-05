@@ -14,9 +14,9 @@ import java.util.Properties;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.jslib.tiny.container.mvc.AbstractView;
-import com.jslib.tiny.container.mvc.View;
-import com.jslib.tiny.container.mvc.ViewMeta;
+import com.jslib.container.mvc.AbstractView;
+import com.jslib.container.mvc.View;
+import com.jslib.container.mvc.ViewMeta;
 import com.jslib.util.Classes;
 
 import jakarta.servlet.ServletOutputStream;

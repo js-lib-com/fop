@@ -24,11 +24,11 @@ import org.xml.sax.SAXException;
 
 import com.jslib.api.json.Json;
 import com.jslib.lang.BugError;
-import com.jslib.tiny.container.mvc.AbstractView;
 import com.jslib.api.log.Log;
 import com.jslib.api.log.LogFactory;
 import com.jslib.api.template.Template;
 import com.jslib.api.template.TemplateEngine;
+import com.jslib.container.mvc.AbstractView;
 import com.jslib.util.Classes;
 
 /**

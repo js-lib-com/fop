@@ -1,4 +1,4 @@
-package js.fop;
+package com.jslib.fop;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,12 +14,13 @@ import java.util.Properties;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.jslib.tiny.container.mvc.AbstractView;
+import com.jslib.tiny.container.mvc.View;
+import com.jslib.tiny.container.mvc.ViewMeta;
+import com.jslib.util.Classes;
+
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
-import js.tiny.container.mvc.AbstractView;
-import js.tiny.container.mvc.View;
-import js.tiny.container.mvc.ViewMeta;
-import js.util.Classes;
 
 public class ViewUnitTest
 {

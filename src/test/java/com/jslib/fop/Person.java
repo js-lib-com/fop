@@ -1,11 +1,11 @@
-package js.fop;
+package com.jslib.fop;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
 import java.util.Date;
 
-import js.format.StandardDateTime;
+import com.jslib.format.StandardDateTime;
 
 public final class Person {
 	public int id;

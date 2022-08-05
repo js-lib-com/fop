@@ -1,4 +1,4 @@
-package js.fop;
+package com.jslib.fop;
 
 public enum State
 {

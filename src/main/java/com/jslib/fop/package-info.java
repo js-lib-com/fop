@@ -6,4 +6,4 @@
  * @author Iulian Rotaru
  * @version draft
  */
-package js.fop;
+package com.jslib.fop;

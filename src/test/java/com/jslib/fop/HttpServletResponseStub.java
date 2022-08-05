@@ -1,4 +1,4 @@
-package js.fop;
+package com.jslib.fop;
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -1,4 +1,4 @@
-package js.fop;
+package com.jslib.fop;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -22,14 +22,14 @@ import org.apache.fop.apps.FopFactoryBuilder;
 import org.apache.fop.apps.MimeConstants;
 import org.xml.sax.SAXException;
 
-import js.json.Json;
-import js.lang.BugError;
+import com.jslib.api.json.Json;
+import com.jslib.lang.BugError;
+import com.jslib.tiny.container.mvc.AbstractView;
 import com.jslib.api.log.Log;
 import com.jslib.api.log.LogFactory;
-import js.template.Template;
-import js.template.TemplateEngine;
-import js.tiny.container.mvc.AbstractView;
-import js.util.Classes;
+import com.jslib.api.template.Template;
+import com.jslib.api.template.TemplateEngine;
+import com.jslib.util.Classes;
 
 /**
  * View for RTF documents based on XSL-FO template. RTF stands for Rich Text Format and is developed by Microsoft. Most word

@@ -1,4 +1,4 @@
-package js.fop;
+package com.jslib.fop;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -10,7 +10,7 @@ import java.io.Writer;
 
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.WriteListener;
-import js.io.WriterOutputStream;
+import com.jslib.io.WriterOutputStream;
 
 public class MockServletOutputStream extends ServletOutputStream {
 	private OutputStream stream;

@@ -100,7 +100,7 @@ final class PdfView extends AbstractView
 
           // set base URL for resource files, e.g. images, to directory where .fo template resides
           URI baseURI = meta.getTemplateFile().getParentFile().toURI();
-          log.debug("Set resources base path to |%s|.", baseURI);
+          log.debug("Set resources base path to |{uri}|.", baseURI);
 
           FopConfParser parser;
           try {
@@ -138,7 +138,7 @@ final class PdfView extends AbstractView
     Template template = templateEngine.getTemplate(meta.getTemplateFile());
     String templateFO = template.serialize(model);
 
-    log.debug("PDF template loading from disk and serialization to string last %d msec. Resulting string size is %d bytes.", new Date().getTime() - timestamp,
+    log.info("PDF template loading from disk and serialization to string last {processing_time} msec. Resulting string size is {template_size} bytes.", new Date().getTime() - timestamp,
         templateFO.length());
     timestamp = new Date().getTime();
 
@@ -184,6 +184,6 @@ final class PdfView extends AbstractView
       outputStream.flush();
     }
 
-    log.debug("PDF transformation processing last %d msec.", new Date().getTime() - timestamp);
+    log.info("PDF transformation processing last {processing_time} msec.", new Date().getTime() - timestamp);
   }
 }

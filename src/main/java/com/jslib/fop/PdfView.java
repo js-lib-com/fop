@@ -100,7 +100,7 @@ final class PdfView extends AbstractView
 
           // set base URL for resource files, e.g. images, to directory where .fo template resides
           URI baseURI = meta.getTemplateFile().getParentFile().toURI();
-          log.debug("Set resources base path to |{uri}|.", baseURI);
+          log.debug("Set resources base path to |{}|.", baseURI);
 
           FopConfParser parser;
           try {
